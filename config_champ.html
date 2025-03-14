@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurer les critères des Junglers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Configurer les critères des Junglers</h1>
+
+        <!-- Sélection du champion -->
+        <label for="champion-select">Sélectionnez un champion :</label>
+        <select id="champion-select">
+            <!-- Les options seront ajoutées dynamiquement -->
+        </select>
+
+        <!-- Liste des critères -->
+        <div id="criteria-container" style="margin-top: 20px;">
+            <h2>Critères</h2>
+            <form id="criteria-form">
+                <!-- Les critères seront ajoutés dynamiquement -->
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Charger les données des champions
+        const championsData = {
+            "champions": [
+                { "id": 1, "name": "Darius", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 2, "name": "Nocturne", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 3, "name": "Viego", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 4, "name": "Master Yi", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 5, "name": "Lee Sin", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 6, "name": "Kayn", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 7, "name": "Diana", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 8, "name": "Warwick", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 9, "name": "Yorick", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 10, "name": "Graves", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 11, "name": "Jarvan IV", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 12, "name": "Elise", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 13, "name": "Wukong", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 14, "name": "Nunu", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 15, "name": "Shaco", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 16, "name": "Gwen", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 17, "name": "Fiddlesticks", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 18, "name": "Xin Zhao", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 19, "name": "Vi", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 20, "name": "Kindred", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 21, "name": "Amumu", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 22, "name": "Hecarim", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 23, "name": "Pantheon", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 24, "name": "Volibear", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 25, "name": "Ekko", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 26, "name": "Briar", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 27, "name": "Talon", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 28, "name": "Karthus", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 29, "name": "Rek'Sai", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 30, "name": "Udyr", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 31, "name": "Zed", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 32, "name": "Zyra", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 33, "name": "Rammus", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 34, "name": "Evelynn", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 35, "name": "Lillia", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 36, "name": "Shyvana", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 37, "name": "Bel'Veth", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 38, "name": "Kha'Zix", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 39, "name": "Zac", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 40, "name": "Ivern", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 41, "name": "Sejuani", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 42, "name": "Rengar", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 43, "name": "Nidalee", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 44, "name": "Gragas", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} },
+                { "id": 45, "name": "Skarner", "image": "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/.png",
+      "criteria": {} }
+            ]
+        };
+
+        const criteriaList = [
+            "Tank", "Bruiser", "Assassin", "Mage",
+            // Saut de ligne
+            "AP", "AD", "Brut",
+            // Saut de ligne
+            "Mêlée", "Range",
+            // Saut de ligne
+            "CC de zone", "CC", "STUN", "Slow", "Hook", "Lock",
+            // Saut de ligne
+            "Antiheal",
+            // Saut de ligne
+            "AntiCC", "Rattrape Flash", "Traverse mur", "Enferme", "Global", "Grosse movespeed", "Exécution",
+            // Saut de ligne
+            "Heal",
+            // Saut de ligne
+            "Front Lane", "Flanc", "Peel", "Poke",
+            // Saut de ligne
+            "MyChampionPool"
+        ];
+
+        const championSelect = document.getElementById("champion-select");
+        const criteriaForm = document.getElementById("criteria-form");
+
+        // Initialiser la liste déroulante des champions
+        function populateChampionSelect() {
+            championsData.champions.forEach(champion => {
+                const option = document.createElement("option");
+                option.value = champion.id;
+                option.textContent = champion.name;
+                championSelect.appendChild(option);
+            });
+        }
+
+        // Afficher les critères pour le champion sélectionné
+        function displayCriteria(championId) {
+            const champion = championsData.champions.find(c => c.id == championId);
+            if (!champion) return;
+
+            // Réinitialiser le formulaire
+            criteriaForm.innerHTML = "";
+
+            // Ajouter les cases à cocher pour chaque critère avec des séparateurs visuels
+            const categories = [
+                { title: "Rôles", items: ["Tank", "Bruiser", "Assassin", "Mage"] },
+                { title: "Types de dégâts", items: ["AP", "AD", "Brut"] },
+                { title: "Portée", items: ["Mêlée", "Range"] },
+                { title: "Contrôle de foule", items: ["CC de zone", "CC", "STUN", "Slow", "Hook", "Lock", "Fear"] },
+                { title: "Utilité", items: ["Antiheal", "AntiCC", "Rattrape Flash", "Traverse mur", "Enferme", "Global", "Grosse movespeed", "Exécution", "Reset Aggro", "Dash"] },
+                { title: "Soutien", items: ["Heal", "Shield"] },
+                { title: "Positionnement", items: ["Front Lane", "Flanc", "Poke"] },
+                { title: "Autres", items: ["MyChampionPool"] }
+            ];
+
+            categories.forEach(category => {
+                // Ajouter un titre pour chaque catégorie
+                const categoryTitle = document.createElement("h3");
+                categoryTitle.textContent = category.title;
+                categoryTitle.style.marginTop = "20px";
+                categoryTitle.style.color = "#C8AA6E";
+                criteriaForm.appendChild(categoryTitle);
+
+                // Ajouter les critères de la catégorie
+                category.items.forEach(criterion => {
+                    const label = document.createElement("label");
+                    label.style.display = "block";
+                    label.style.marginBottom = "10px";
+
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.name = criterion;
+                    checkbox.checked = champion.criteria[criterion] || false;
+
+                    // Mettre à jour le critère lorsque la case est cochée/décochée
+                    checkbox.addEventListener("change", () => {
+                        champion.criteria[criterion] = checkbox.checked;
+                        saveData();
+                    });
+
+                    label.appendChild(checkbox);
+                    label.appendChild(document.createTextNode(` ${criterion}`));
+                    criteriaForm.appendChild(label);
+                });
+
+                // Ajouter un séparateur visuel (ligne horizontale)
+                const separator = document.createElement("hr");
+                separator.style.border = "1px solid #C8AA6E";
+                separator.style.margin = "20px 0";
+                criteriaForm.appendChild(separator);
+            });
+        }
+
+        // Sauvegarder les données dans le fichier JSON (simulation)
+        function saveData() {
+            championsData.champions.forEach(champion => {
+                // Ajouter tous les critères non définis et les mettre à false
+                criteriaList.forEach(criterion => {
+                    if (champion.criteria[criterion] === undefined) {
+                        champion.criteria[criterion] = false;
+                    }
+                });
+            });
+
+            console.log("Données sauvegardées :", JSON.stringify(championsData, null, 2));
+            // Ici, vous pouvez envoyer les données à un backend pour les sauvegarder dans un fichier JSON
+        }
+
+        // Écouter les changements dans la liste déroulante
+        championSelect.addEventListener("change", (e) => {
+            displayCriteria(e.target.value);
+        });
+
+        // Initialisation
+        populateChampionSelect();
+        displayCriteria(championsData.champions[0].id); // Afficher le premier champion par défaut
+    </script>
+</body>
+
+</html>
