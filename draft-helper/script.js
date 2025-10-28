@@ -164,6 +164,9 @@ function calculateChampionPriority(champion) {
         // Bonus si pas d'AD allié
         if ((allyTeamCriteria['AD'] || 0) === 0) priority += 2;
 
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
+
         // Bonus si pas de tank allié
         if ((allyTeamCriteria['Tank'] || 0) === 0) priority += 2;
 
@@ -202,6 +205,9 @@ function calculateChampionPriority(champion) {
         if ((allyTeamCriteria['AD'] || 0) === 0) {
             priority += 2;
         }
+
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // malus si pas de frontline allié
         if ((allyTeamCriteria['Frontline'] || 0) === 0) priority -= 2;
@@ -244,6 +250,9 @@ function calculateChampionPriority(champion) {
         if ((allyTeamCriteria['AD'] || 0) === 0) {
             priority += 2;
         }
+
+                                // -1 pour chaque AD allié
+                                priority -= allyTeamCriteria['AD'] || 0;
 
         // malus si pas de frontline allié
         if ((allyTeamCriteria['Frontline'] || 0) === 0) priority -= 2;
@@ -465,6 +474,8 @@ function calculateChampionPriority(champion) {
     }
 
     if (champion.name === "Chogath") {
+                // -1 pour chaque AP allié
+                priority -= allyTeamCriteria['AP'] || 0;
         // Bonus si pas de tank allié
         if ((allyTeamCriteria['Tank'] || 0) === 0) priority += 2;
 
@@ -528,6 +539,9 @@ function calculateChampionPriority(champion) {
         // Bonus si pas d'AD allié
         if ((allyTeamCriteria['AD'] || 0) === 0) priority += 2;
 
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
+
         // malus si pas de frontline allié
         if ((allyTeamCriteria['Frontline'] || 0) === 0) priority -= 1;
 
@@ -554,6 +568,9 @@ function calculateChampionPriority(champion) {
     if (champion.name === "Wukong") {
         // Bonus si pas de bruiser allié
         if ((allyTeamCriteria['Bruiser'] || 0) === 0) priority += 1;
+
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // Bonus si au moins 1 tank allié
         if ((allyTeamCriteria['Tank'] || 0) >= 1) priority += 1;
@@ -587,6 +604,9 @@ function calculateChampionPriority(champion) {
     if (champion.name === "Vi") {
         // Bonus si pas de bruiser allié
         if ((allyTeamCriteria['Bruiser'] || 0) === 0) priority += 1;
+
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // Bonus si au moins 1 tank allié
         if ((allyTeamCriteria['Tank'] || 0) >= 1) priority += 1;
@@ -623,6 +643,9 @@ function calculateChampionPriority(champion) {
     if (champion.name === "Nunu") {
         // Bonus si pas d'AP allié
         if ((allyTeamCriteria['AP'] || 0) === 0) priority += 2;
+
+                        // -1 pour chaque AP allié
+                        priority -= allyTeamCriteria['AP'] || 0;
 
         // Malus pour chaque trap ennemi
         priority -= enemyTeamCriteria['Trap'] || 0;
@@ -684,6 +707,9 @@ function calculateChampionPriority(champion) {
         // Bonus si pas d'AP allié
         if ((allyTeamCriteria['AP'] || 0) === 0) priority += 2;
 
+                        // -1 pour chaque AP allié
+                        priority -= allyTeamCriteria['AP'] || 0;
+
         // Bonus si pas peu de waveclear allié
         if ((allyTeamCriteria['Waveclear'] || 0) < 2) priority += 2;
 
@@ -736,6 +762,9 @@ function calculateChampionPriority(champion) {
             priority -= 2;
         }
 
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
+
         // Bonus si pas d'AD allié
         if ((allyTeamCriteria['AD'] || 0) === 0) priority += 2;
 
@@ -763,6 +792,9 @@ function calculateChampionPriority(champion) {
         if ((allyTeamCriteria['Tank'] || 0) === 0) {
             priority -= 2;
         }
+
+                        // -1 pour chaque AP allié
+                        priority -= allyTeamCriteria['AP'] || 0;
 
         // malus si pas de frontline allié
         if ((allyTeamCriteria['Frontline'] || 0) === 0) priority -= 2;
@@ -817,6 +849,9 @@ function calculateChampionPriority(champion) {
         if ((allyTeamCriteria['Tank'] || 0) === 0) {
             priority -= 2;
         }
+
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // Bonus si pas d'AD allié
         if ((allyTeamCriteria['AD'] || 0) === 0) priority += 2;
@@ -936,6 +971,9 @@ function calculateChampionPriority(champion) {
             priority -= 2;
         }
 
+                        // -1 pour chaque AP allié
+                        priority -= allyTeamCriteria['AP'] || 0;
+
         // Bonus/Malus selon la fragilité des ennemis
         priority += enemyTeamCriteria['Fragile'] || 0;
         priority -= enemyTeamCriteria['Tank'] || 0;
@@ -996,6 +1034,9 @@ function calculateChampionPriority(champion) {
         if ((allyTeamCriteria['Tank'] || 0) === 0) {
             priority -= 2;
         }
+
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // Bonus si pas d'AD allié
         if ((allyTeamCriteria['AD'] || 0) === 0) priority += 2;
@@ -1087,6 +1128,9 @@ function calculateChampionPriority(champion) {
         if ((allyTeamCriteria['Tank'] || 0) === 0) {
             priority -= 2;
         }
+
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // Bonus si pas d'AD allié
         if ((allyTeamCriteria['AD'] || 0) === 0) priority += 2;
@@ -1186,6 +1230,9 @@ function calculateChampionPriority(champion) {
     if (champion.name === "Olaf") {
         // Bonus si pas d'AD allié
         if ((allyTeamCriteria['AD'] || 0) === 0) priority += 2;
+
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // Bonus si pas de tank allié
         if ((allyTeamCriteria['Tank'] || 0) === 0) priority += 2;
@@ -1327,6 +1374,9 @@ function calculateChampionPriority(champion) {
         // Bonus si pas de bruiser allié
         if ((allyTeamCriteria['Bruiser'] || 0) === 0) priority += 1;
 
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
+
         // Bonus si au moins 1 tank allié
         if ((allyTeamCriteria['Tank'] || 0) >= 1) priority += 1;
 
@@ -1428,6 +1478,9 @@ function calculateChampionPriority(champion) {
         // Bonus si pas d'AP allié
         if ((allyTeamCriteria['AP'] || 0) === 0) priority += 2;
 
+                        // -1 pour chaque AP allié
+                        priority -= allyTeamCriteria['AP'] || 0;
+
         // Bonus si pas de tank allié
         if ((allyTeamCriteria['Tank'] || 0) === 0) priority += 1;
 
@@ -1458,6 +1511,9 @@ function calculateChampionPriority(champion) {
         if ((allyTeamCriteria['Tank'] || 0) === 0) {
             priority -= 2;
         }
+
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // Bonus si pas d'AP allié
         if ((allyTeamCriteria['AP'] || 0) === 0) priority += 2;
