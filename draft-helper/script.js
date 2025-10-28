@@ -251,8 +251,8 @@ function calculateChampionPriority(champion) {
             priority += 2;
         }
 
-                                // -1 pour chaque AD allié
-                                priority -= allyTeamCriteria['AD'] || 0;
+        // -1 pour chaque AD allié
+        priority -= allyTeamCriteria['AD'] || 0;
 
         // malus si pas de frontline allié
         if ((allyTeamCriteria['Frontline'] || 0) === 0) priority -= 2;
@@ -474,10 +474,15 @@ function calculateChampionPriority(champion) {
     }
 
     if (champion.name === "Chogath") {
-                // -1 pour chaque AP allié
-                priority -= allyTeamCriteria['AP'] || 0;
+        // -1 pour chaque AP allié
+        priority -= allyTeamCriteria['AP'] || 0;
         // Bonus si pas de tank allié
         if ((allyTeamCriteria['Tank'] || 0) === 0) priority += 2;
+
+        // Malus pour dash et traverse wall ennemis
+        priority -= enemyTeamCriteria['Dash'] || 0;
+        priority -= enemyTeamCriteria['TP'] || 0;
+        priority -= enemyTeamCriteria['Escape'] || 0;
 
         // Bonus si pas peu de waveclear allié
         if ((allyTeamCriteria['Waveclear'] || 0) < 2) priority += 1;
@@ -527,6 +532,8 @@ function calculateChampionPriority(champion) {
                 break;
             // Pas de malus si pas de CC
         }
+
+
     }
 
     if (champion.name === "Warwick") {
@@ -644,8 +651,8 @@ function calculateChampionPriority(champion) {
         // Bonus si pas d'AP allié
         if ((allyTeamCriteria['AP'] || 0) === 0) priority += 2;
 
-                        // -1 pour chaque AP allié
-                        priority -= allyTeamCriteria['AP'] || 0;
+        // -1 pour chaque AP allié
+        priority -= allyTeamCriteria['AP'] || 0;
 
         // Malus pour chaque trap ennemi
         priority -= enemyTeamCriteria['Trap'] || 0;
@@ -707,8 +714,8 @@ function calculateChampionPriority(champion) {
         // Bonus si pas d'AP allié
         if ((allyTeamCriteria['AP'] || 0) === 0) priority += 2;
 
-                        // -1 pour chaque AP allié
-                        priority -= allyTeamCriteria['AP'] || 0;
+        // -1 pour chaque AP allié
+        priority -= allyTeamCriteria['AP'] || 0;
 
         // Bonus si pas peu de waveclear allié
         if ((allyTeamCriteria['Waveclear'] || 0) < 2) priority += 2;
@@ -793,8 +800,8 @@ function calculateChampionPriority(champion) {
             priority -= 2;
         }
 
-                        // -1 pour chaque AP allié
-                        priority -= allyTeamCriteria['AP'] || 0;
+        // -1 pour chaque AP allié
+        priority -= allyTeamCriteria['AP'] || 0;
 
         // malus si pas de frontline allié
         if ((allyTeamCriteria['Frontline'] || 0) === 0) priority -= 2;
@@ -971,8 +978,8 @@ function calculateChampionPriority(champion) {
             priority -= 2;
         }
 
-                        // -1 pour chaque AP allié
-                        priority -= allyTeamCriteria['AP'] || 0;
+        // -1 pour chaque AP allié
+        priority -= allyTeamCriteria['AP'] || 0;
 
         // Bonus/Malus selon la fragilité des ennemis
         priority += enemyTeamCriteria['Fragile'] || 0;
@@ -1478,8 +1485,8 @@ function calculateChampionPriority(champion) {
         // Bonus si pas d'AP allié
         if ((allyTeamCriteria['AP'] || 0) === 0) priority += 2;
 
-                        // -1 pour chaque AP allié
-                        priority -= allyTeamCriteria['AP'] || 0;
+        // -1 pour chaque AP allié
+        priority -= allyTeamCriteria['AP'] || 0;
 
         // Bonus si pas de tank allié
         if ((allyTeamCriteria['Tank'] || 0) === 0) priority += 1;
@@ -1672,7 +1679,7 @@ function resetAllCounters() {
     document.querySelectorAll('.counter').forEach(counter => {
         counter.textContent = '0';
     });
-    
+
     // Réinitialiser les critères
     Object.keys(allyTeamCriteria).forEach(key => {
         allyTeamCriteria[key] = 0;
@@ -1710,7 +1717,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupEventListeners();
         loadChampions();
         checkResetButtonState();
-        
+
         // Ajouter l'écouteur d'événement pour le bouton reset
         document.getElementById('reset-button').addEventListener('click', resetAllCounters);
     }, 100);

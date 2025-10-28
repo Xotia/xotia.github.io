@@ -35,7 +35,9 @@
         "Poke": false,
         "MyChampionPool": true,
         "Reset Aggro": false,
-        "Dash": false
+        "Dash": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -75,7 +77,9 @@
         "MyChampionPool": true,
         "Fear": true,
         "Reset Aggro": false,
-        "Dash": true
+        "Dash": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -115,7 +119,9 @@
         "Poke": false,
         "MyChampionPool": true,
         "Reset Aggro": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -153,7 +159,9 @@
         "Peel": false,
         "Poke": false,
         "MyChampionPool": true,
-        "Reset Aggro": true
+        "Reset Aggro": true,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -190,7 +198,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": true,
+        "FastClear" : false
       }
     },
     {
@@ -230,7 +240,9 @@
         "Poke": false,
         "MyChampionPool": false,
         "Reset Aggro": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -267,7 +279,9 @@
         "Peel": true,
         "Poke": true,
         "MyChampionPool": false,
-        "Dash": true
+        "Dash": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -306,7 +320,9 @@
         "Poke": false,
         "MyChampionPool": true,
         "Fear": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -344,7 +360,9 @@
         "Flanc": false,
         "Peel": true,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -383,7 +401,9 @@
         "Peel": false,
         "Poke": true,
         "MyChampionPool": false,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -421,7 +441,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -459,7 +481,9 @@
         "Peel": false,
         "Poke": true,
         "MyChampionPool": false,
-        "Reset Aggro": true
+        "Reset Aggro": true,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -497,7 +521,9 @@
         "Peel": false,
         "Poke": false,
         "MyChampionPool": true,
-        "Reset Aggro": true
+        "Reset Aggro": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -535,7 +561,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": false,
-        "MyChampionPool": true
+        "MyChampionPool": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -574,7 +602,9 @@
         "Poke": true,
         "MyChampionPool": false,
         "Fear": true,
-        "Reset Aggro": true
+        "Reset Aggro": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -612,7 +642,9 @@
         "Flanc": true,
         "Peel": false,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -651,7 +683,9 @@
         "Peel": false,
         "Poke": false,
         "MyChampionPool": false,
-        "Fear": true
+        "Fear": true,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -689,7 +723,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -726,7 +762,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -764,7 +802,9 @@
         "Peel": false,
         "Poke": false,
         "MyChampionPool": false,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -801,7 +841,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": false,
-        "MyChampionPool": true
+        "MyChampionPool": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -840,7 +882,9 @@
         "Poke": false,
         "MyChampionPool": true,
         "Fear": true,
-        "Dash": false
+        "Dash": false,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -878,7 +922,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": true,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": true,
+        "FastClear" : false
       }
     },
     {
@@ -917,7 +963,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -953,7 +1001,9 @@
         "Flanc": true,
         "Peel": false,
         "Poke": true,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -991,7 +1041,9 @@
         "Flanc": true,
         "Peel": false,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -1029,7 +1081,9 @@
         "Flanc": true,
         "Peel": false,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1067,7 +1121,9 @@
         "Flanc": false,
         "Peel": false,
         "Poke": true,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -1105,7 +1161,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -1143,7 +1201,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": false,
-        "MyChampionPool": true
+        "MyChampionPool": true,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -1181,7 +1241,9 @@
         "Flanc": false,
         "Peel": false,
         "Poke": true,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1219,7 +1281,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": true,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1257,7 +1321,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1296,7 +1362,9 @@
         "Peel": false,
         "Poke": false,
         "MyChampionPool": false,
-        "Reset Aggro": true
+        "Reset Aggro": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1334,7 +1402,9 @@
         "Flanc": true,
         "Peel": false,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1373,7 +1443,9 @@
         "Peel": false,
         "Poke": true,
         "MyChampionPool": false,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1411,7 +1483,9 @@
         "Flanc": false,
         "Peel": false,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1449,7 +1523,9 @@
         "Peel": false,
         "Poke": true,
         "MyChampionPool": false,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1487,7 +1563,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1525,7 +1603,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Shield": true
+        "Shield": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1562,7 +1642,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1599,7 +1681,9 @@
         "Flanc": true,
         "Peel": false,
         "Poke": false,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1636,7 +1720,9 @@
         "Peel": false,
         "Poke": true,
         "MyChampionPool": false,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -1673,7 +1759,9 @@
         "Peel": true,
         "Poke": true,
         "MyChampionPool": false,
-        "Dash": true
+        "Dash": true,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -1709,7 +1797,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": false,
-        "MyChampionPool": true
+        "MyChampionPool": true,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -1745,7 +1835,9 @@
         "Flanc": true,
         "Peel": false,
         "Poke": true,
-        "MyChampionPool": false
+        "MyChampionPool": false,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -1781,7 +1873,9 @@
         "Flanc": true,
         "Peel": true,
         "Poke": false,
-        "MyChampionPool": true
+        "MyChampionPool": true,
+        "Meta": true,
+        "FastClear" : false
       }
     },
     {
@@ -1819,7 +1913,9 @@
         "Peel": false,
         "Poke": true,
         "MyChampionPool": false,
-        "Shield": false
+        "Shield": false,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -1857,7 +1953,9 @@
         "Peel": false,
         "Poke": true,
         "MyChampionPool": true,
-        "Shield": false
+        "Shield": false,
+        "Meta": true,
+        "FastClear" : true
       }
     },
     {
@@ -1894,7 +1992,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Shield": false
+        "Shield": false,
+        "Meta": true,
+        "FastClear" : false
       }
     },
     {
@@ -1932,7 +2032,9 @@
         "Peel": false,
         "Poke": true,
         "MyChampionPool": false,
-        "Shield": false
+        "Shield": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -1970,7 +2072,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Shield": false
+        "Shield": false,
+        "Meta": true,
+        "FastClear" : false
       }
     },
     {
@@ -2008,7 +2112,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Shield": false
+        "Shield": false,
+        "Meta": false,
+        "FastClear" : true
       }
     },
     {
@@ -2046,7 +2152,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": false,
-        "Shield": true
+        "Shield": true,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -2084,7 +2192,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Shield": false
+        "Shield": false,
+        "Meta": false,
+        "FastClear" : false
       }
     },
     {
@@ -2122,7 +2232,9 @@
         "Peel": true,
         "Poke": false,
         "MyChampionPool": true,
-        "Shield": false
+        "Shield": false,
+        "Meta": true,
+        "FastClear" : false
       }
     }
   ]
