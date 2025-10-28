@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoL Draft Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="team-section ally-team">
+            <h2>Équipe Alliée</h2>
+            <div class="criteria-list">
+                <!-- Les critères de l'équipe alliée seront générés dynamiquement -->
+            </div>
+        </div>
+
+        <div class="champions-section">
+            <div class="champions-header">
+                <h2>Champions Recommandés</h2>
+                <button id="reset-button" class="reset-button" title="Réinitialiser tous les compteurs">
+                    <img src="https://cdn-icons-png.flaticon.com/512/561/561189.png" alt="Reset" />
+                </button>
+            </div>
+            <div id="champions-list">
+                <!-- La liste des champions sera générée dynamiquement -->
+            </div>
+        </div>
+
+        <div class="team-section enemy-team">
+            <h2>Équipe Adverse</h2>
+            <div class="criteria-list">
+                <!-- Les critères de l'équipe adverse seront générés dynamiquement -->
+            </div>
+        </div>
+    </div>
+
+    <script src="criteria.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

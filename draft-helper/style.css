@@ -1,0 +1,263 @@
+/* Style général */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #0A1428;
+    color: #ffffff;
+}
+
+.header-controls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.reset-button {
+    background: #1E2328;
+    border: 2px solid #C8AA6E;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.reset-button.disabled {
+    border-color: #4a4a4a;
+    cursor: default;
+    opacity: 0.5;
+}
+
+.reset-button.disabled:hover {
+    transform: none;
+    background: #1E2328;
+}
+
+.reset-button.disabled img {
+    filter: grayscale(100%) opacity(50%);
+}
+
+.reset-button:hover {
+    transform: rotate(180deg);
+    background: #C8AA6E;
+}
+
+.reset-button img {
+    width: 20px;
+    height: 20px;
+    filter: invert(80%) sepia(33%) saturate(401%) hue-rotate(358deg) brightness(86%) contrast(86%);
+}
+
+.reset-button:hover img {
+    filter: invert(100%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Sections d'équipe */
+.team-section {
+    flex: 1;
+    background-color: #1E2328;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.champions-section {
+    flex: 2;
+    background-color: #1E2328;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.champions-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.champions-header h2 {
+    margin: 0;
+}
+
+/* Groupes de critères */
+.criteria-group {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #292E38;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.criteria-group h3 {
+    margin: 0 0 15px 0;
+    color: #C8AA6E;
+    font-size: 1.1em;
+    border-bottom: 2px solid #C8AA6E;
+    padding-bottom: 5px;
+}
+
+/* Items de critères */
+.criteria-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.criteria-name {
+    flex: 1;
+    font-size: 0.9em;
+    color: #F0E6D2;
+}
+
+.counter {
+    min-width: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #C8AA6E;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Boutons */
+button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.minus-btn {
+    background-color: #733B3B;
+    color: white;
+}
+
+.plus-btn {
+    background-color: #2B5C2B;
+    color: white;
+}
+
+.minus-btn:hover {
+    background-color: #8B4747;
+    transform: scale(1.05);
+}
+
+.plus-btn:hover {
+    background-color: #366E36;
+    transform: scale(1.05);
+}
+
+/* Liste des champions */
+#champions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.champion-card {
+    background-color: #292E38;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.champion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.champion-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    border: 2px solid #C8AA6E;
+}
+
+.champion-card .name {
+    font-size: 0.9em;
+    color: #C8AA6E;
+    margin: 5px 0;
+}
+
+.champion-card .priority {
+    font-size: 0.8em;
+    color: #F0E6D2;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Titres */
+h2 {
+    color: #C8AA6E;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E2328;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C8AA6E;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9F8655;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .team-section, .champions-section {
+        width: 100%;
+        max-height: none;
+    }
+}
